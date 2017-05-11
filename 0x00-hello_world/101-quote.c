@@ -12,7 +12,7 @@ int main(void)
 
 	a = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	for(x = 0; a[x] != '\0'; x++)
+	for (x = 0; a[x] != '\0'; x++)
 	{
 		putchar(a[x]);
 	}
