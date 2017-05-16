@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - function to search for uppercase & lowercase letters
- *
+ * @c: variable that passes through if...else
  * Return: 1 upon success
  **/
 int _isalpha(int c)

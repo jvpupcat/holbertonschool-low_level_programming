@@ -2,7 +2,7 @@
 
 /**
  * _islower - function that searches for lowercase letter
- *
+ * @c: variable that passes through if...else
  * Return: 1 if c is lowercase
  **/
 int _islower(int c)
