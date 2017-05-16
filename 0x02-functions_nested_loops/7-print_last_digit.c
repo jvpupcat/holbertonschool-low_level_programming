@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - entry point
- *
+ * @x: variable that passes through function
  * Return: last digit
  **/
 int print_last_digit(int x)
