@@ -12,7 +12,8 @@ int main(void)
 	long int first = 1;
 	long int second = 2;
 
-	for (c = 1; c < 51; c++)
+	printf("%ld, %ld, ", first, second);
+	for (c = 3; c < 51; c++)
 	{
 		if (c <= 1)
 			next = c;
@@ -23,7 +24,7 @@ int main(void)
 			second = next;
 		}
 		printf("%ld", next);
-		if (c > 0 && c < 50)
+		if (c >= 3 && c < 50)
 		{
 			printf(", ");
 		}
