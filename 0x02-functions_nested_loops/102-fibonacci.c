@@ -9,8 +9,8 @@
 int main(void)
 {
 	long int c, next;
-	long int first = 0;
-	long int second = 1;
+	long int first = 1;
+	long int second = 2;
 
 	for (c = 1; c < 51; c++)
 	{
