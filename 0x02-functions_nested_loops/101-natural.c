@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
+ * main - main function that calculates the sum of multiples of 3 & 5
  *
- *
- *
+ * Return: 0 upon success
  **/
 int main(void)
 {
