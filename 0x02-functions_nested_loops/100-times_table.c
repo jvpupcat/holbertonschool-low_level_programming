@@ -8,7 +8,6 @@ void print_times_table(int n)
 {
 	int a, b, c, store_100s, store_10s, store_1s;
 
-
 	if (n == 0)
 		_putchar('0');
 	for (a = 0; a <= n; a++)
@@ -22,9 +21,7 @@ void print_times_table(int n)
 				if (c < 10)
 				{
 					if (b != 0)
-					{
-						_putchar(' '); _putchar(' ');
-					}
+						_putchar(' '), _putchar(' ');
 					_putchar(c + '0');
 				}
 				else if (c < 100)
@@ -40,9 +37,7 @@ void print_times_table(int n)
 					_putchar(store_1s + '0');
 				}
 				if (b < n)
-				{
 					_putchar(','); _putchar(' ');
-				}
 			}
 			_putchar('\n');
 		}
