@@ -11,7 +11,7 @@ int main(void)
 	long int first = 1;
 	long int second = 2;
 	long int even_sum = 2;
-	
+
 	for (c = 3; c < 33; c++)
 	{
 		if (c <= 1)
