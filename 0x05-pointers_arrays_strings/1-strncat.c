@@ -22,6 +22,7 @@ int _strlen(char *s)
  * _strncat - function that concatenates two strings
  * @dest: s1
  * @src: s2
+ * @n: variable n
  * Return: pointer
  **/
 char *_strncat(char *dest, char *src, int n)
