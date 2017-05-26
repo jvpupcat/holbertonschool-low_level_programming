@@ -16,9 +16,9 @@ char *rot13(char *x)
 	{
 		for (b = 0; s[b] != '\0'; b++)
 		{
-			if (s[a] == x[b])
+			if (s[b] == x[a])
 			{
-				s[a] = t[b];
+				x[a] = t[b];
 				break;
 			}
 		}
