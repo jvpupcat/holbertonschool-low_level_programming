@@ -30,14 +30,14 @@ char *cap_string(char *s)
 				s[a] = s[a] - 32;
 				c = 0;
 			}
-			/*else if (s[a] >= '0' && s[a] <= '9')
-			{
-				c = 0;
-			}*/
-			else if (s[a] >= 65 && s[a] <= 90)
+			else if (s[a] >= '0' && s[a] <= '9')
 			{
 				c = 0;
 			}
+			/*else if (s[a] >= 'A' && s[a] <= 'Z')
+			{
+				c = 0;
+			}*/
 		}
 	}
 	return (s);
