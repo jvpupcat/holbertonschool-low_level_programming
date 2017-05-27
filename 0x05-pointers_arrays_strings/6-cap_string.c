@@ -12,7 +12,7 @@ char *cap_string(char *s)
 
 	for (a = 0, c = 0; s[a] != '\0'; a++)
 	{
-		if (s[0] >= 97 && s[0] <= 122)
+		if (s[0] >= 'a' && s[0] <= 'z')
 		{
 			c = 1;
 		}
@@ -25,15 +25,15 @@ char *cap_string(char *s)
 		}
 		if (c != 0)
 		{
-			if (s[a] >= 97 && s[a] <= 122)
+			if (s[a] >= 'a' && s[a] <= 'z')
 			{
 				s[a] = s[a] - 32;
 				c = 0;
 			}
-			else if (s[a] >= 48 && s[a] <= 57)
+			/*else if (s[a] >= '0' && s[a] <= '9')
 			{
 				c = 0;
-			}
+			}*/
 			else if (s[a] >= 65 && s[a] <= 90)
 			{
 				c = 0;
