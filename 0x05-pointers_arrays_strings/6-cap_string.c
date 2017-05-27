@@ -34,10 +34,10 @@ char *cap_string(char *s)
 			{
 				c = 0;
 			}
-			/*else if (s[a] >= 'A' && s[a] <= 'Z')
+			else if (s[a] >= 'A' && s[a] <= 'Z')
 			{
 				c = 0;
-			}*/
+			}
 		}
 	}
 	return (s);
