@@ -36,8 +36,7 @@ char *cap_string(char *s)
 			}
 			else if (s[a] >= 65 && s[a] <= 90)
 			{
-				;
-				/*c = 0;*/
+				c = 0;
 			}
 		}
 	}
