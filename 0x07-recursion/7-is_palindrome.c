@@ -19,7 +19,7 @@ int length(char *s)
 
 /**
  * _move_through - function that moves through string
- * @s: pointer that points to string
+ * @str: pointer that points to string
  * @x: variable that starts at beginning of string
  * @y: variable that starts at end of string
  * Return: 0 upon success
