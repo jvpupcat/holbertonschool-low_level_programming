@@ -9,7 +9,7 @@
  **/
 int _strlen(char *str)
 {
-	int x;
+	int x = 0;
 
 	while (str[x] != '\0')
 	{
@@ -33,12 +33,15 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	array = malloc((_strlen(str)) * sizeof(char) + 1);
-	for (x = 0; x <= _strlen(str); x++)
+	array = malloc((sizeof(char) + 1) * _strlen(str));
+	if (array == NULL)
+	{
+		return (NULL);
+	}
+	for (x = 0; x < _strlen(str); x++)
 	{
 		array[x] = str[x];
 	}
 	array[x] = '\0';
 	return (array);
-	free(array);
 }
