@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	for (a = 0; a < ac; x++)
+	for (a = 0; a < ac; a++)
 	{
 		for (b = 0; av[a][b]; b++)
 		{
@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (b = 0; av[a][b]; b++)
 		{
-			array[c] = av[b];
+			array[c] = av[a][b];
 		}
 	}
 	array[c] = '\0';
