@@ -5,8 +5,8 @@
 /**
  * create_array - function that creates an array of chars/initializes with
  * a specific char
- * @size:
- * @c:
+ * @size: size of array
+ * @c: variable that runs through function
  * Return: array
  **/
 char *create_array(unsigned int size, char c)
