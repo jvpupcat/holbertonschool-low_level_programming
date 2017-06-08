@@ -12,30 +12,9 @@ int _strlen(char *str)
 
 	while (str[x] != '\0')
 	{
-		x++
+		x++;
 	}
 	return (x);
-}
-
-/**
- * _isdigit - function that checks for a digit
- * @c: variable that passes through function
- * Return: 1 upon finding a digit, 0 otherwise
- **/
-char _isdigit(char *c)
-{
-	int a = '0';
-	int i = '9';
-
-	if (c >= a && c <= i)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-	return (0);
 }
 
 /**
@@ -48,6 +27,7 @@ int main(int argc, char *argv[])
 {
 	int a = 0, b = 0;
 	int total;
+	int length;
 
 	if (argc == 1)
 	{
@@ -60,7 +40,7 @@ int main(int argc, char *argv[])
 			length = _strlen(argv[a]);
 			for (b = 0; b < length; b++)
 			{
-				if (_isdigit(*argv) != 0)
+				if (argv[a][b] < '0' || argv[a][b] > '9')
 				{
 					printf("Error\n");
 					return (1);
