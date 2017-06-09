@@ -12,12 +12,14 @@ int *array_range(int min, int max)
 {
 	int x, y;
 	int *array;
+	int diff;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	array = malloc(sizeof(int) * min);
+	diff = max - min + 1;
+	array = malloc(sizeof(int) * diff);
 	if (array == NULL)
 	{
 		return (NULL);
