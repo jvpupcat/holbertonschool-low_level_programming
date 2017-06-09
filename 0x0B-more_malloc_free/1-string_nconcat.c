@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * _strlen - check the code for Holberton School students.
- * @s: a pointer
- * Return: Always 0.
+ * _strlen - function that calculates the length of string
+ * @str: pointer that points to string
+ * Return: x
  */
 int _strlen(char *str)
 {
@@ -19,11 +19,11 @@ int _strlen(char *str)
 }
 
 /**
- * string_nconcat - check for Holberton students.
- * @s1: string
- * @s2: string
+ * string_nconcat - function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
  * @n: unsigned integer
- * Return: pointer
+ * Return: pointer array
  **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
