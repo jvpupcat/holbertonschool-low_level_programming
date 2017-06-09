@@ -56,8 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (d = 0; d < n; c++, d++)
 	{
-		array[c + d] = s2[d];
+		array[c] = s2[d];
 	}
-	array[c + d] = '\0';
 	return (array);
 }
