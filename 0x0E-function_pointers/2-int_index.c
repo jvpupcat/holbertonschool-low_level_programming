@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#define RET_NEG_1 -1
 
 /**
  * int_index - function that searches for an integer
@@ -11,18 +12,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int x;
 
-	if (array == NULL)
-	{
-		return (-1);
-	}
-	if (size <= 0)
-	{
-		return (-1);
-	}
-	if (cmp == NULL)
-	{
-		return (-1);
-	}
+	if (array == NULL || size <= 0 || cmp == NULL)
+		return (RET_NEG_1);
 	for (x = 0; x < size; x++)
 	{
 		if (cmp(array[x]) != 0)
@@ -30,5 +21,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (x);
 		}
 	}
-	return (-1);
+	return (RET_NEG_1);
 }
