@@ -23,8 +23,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	for (x = 0; x < n - 1; x++)
 	{
-		printf("%s%s%s", va_arg(list, char *), separator, va_arg(list, char *));
+		printf("%s%s", va_arg(list, char *), separator);
 	}
+	printf("%s", va_arg(list, char *));
 	va_end(list);
 	putchar('\n');
 }
