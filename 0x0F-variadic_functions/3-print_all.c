@@ -41,7 +41,7 @@ void print_string(char *temp, va_list list)
 {
 	char *ptr = va_arg(list, char *);
 
-	if (temp == NULL)
+	if (ptr == NULL)
 	{
 		printf("%s(nil)", temp);
 		return;
