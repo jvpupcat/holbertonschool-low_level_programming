@@ -1,6 +1,8 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
+#include <stdlib.h>
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
@@ -15,4 +17,5 @@ typedef struct find_func {
 	void (*function)();
 } match_t;
 void print_all(const char * const format, ...);
+
 #endif
