@@ -43,7 +43,7 @@ void print_string(char *temp, va_list list)
 
 	if (temp == NULL)
 	{
-		printf("(nil)");
+		printf("%s(nil", temp);
 		return;
 	}
 	printf("%s%s", temp, ptr);
