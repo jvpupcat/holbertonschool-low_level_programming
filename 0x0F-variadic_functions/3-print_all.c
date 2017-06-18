@@ -3,6 +3,7 @@
 
 /**
  * print_char - function that prints a char
+ * @temp: temp
  * @list: list
  * Return: none
  */
@@ -12,6 +13,7 @@ void print_char(char *temp, va_list list)
 }
 /**
  * print_integer - function that returns an int
+ * @temp: temp
  * @list: list
  * Return: none
  */
@@ -21,6 +23,7 @@ void print_integer(char *temp, va_list list)
 }
 /**
  * print_float - function that returns a float
+ * @temp: temp
  * @list: list
  * Return: none
  */
@@ -30,6 +33,7 @@ void print_float(char *temp, va_list list)
 }
 /**
  * print_string - function that print a string
+ * @temp: temp
  * @list: list
  * Return: none
  */
@@ -46,7 +50,7 @@ void print_string(char *temp, va_list list)
 }
 
 /**
- * print_all - check for Holberton students
+ * print_all - function that prints anything
  * @format: constant
  * @...: ellipsis
  * Return: none
