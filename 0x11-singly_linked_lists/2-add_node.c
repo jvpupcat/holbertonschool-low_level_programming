@@ -16,7 +16,7 @@ int _strlen(const char *str)
 	return (x);
 }
 /**
- * add_node: function that adds a new node at the beginning of a list
+ * add_node - function that adds a new node at the beginning of a list
  * @head: pointer that points to *head
  * @str: string that passes through function
  * Return: new_node;
