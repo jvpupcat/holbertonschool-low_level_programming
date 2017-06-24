@@ -8,7 +8,7 @@
 void print_number(int n)
 {
 	int i;
-	int max = 100000000;
+	int max = 1000000000;
 
 	if (n < 0)
 	{
@@ -19,7 +19,7 @@ void print_number(int n)
 	{
 		_putchar('0');
 	}
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 10; i++)
 	{
 		if (n / max != 0)
 		{
