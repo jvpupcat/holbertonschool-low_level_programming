@@ -2,7 +2,7 @@
 
 /**
  * insert_nodeint_at_index - function that inserts a node in a linked list
- * @head - double pointer that points to head
+ * @head: double pointer that points to head
  * @idx: index of nodes
  * @n: data in each node
  * Return: address of new node or NULL if failed
@@ -35,5 +35,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		store_head = store_head->next;
 	}
+	if (idx > x)
+		free(new_node);
 	return (NULL);
 }
