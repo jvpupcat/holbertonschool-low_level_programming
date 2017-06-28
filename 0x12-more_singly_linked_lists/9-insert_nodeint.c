@@ -35,7 +35,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		store_head = store_head->next;
 	}
-	if (idx > x)
-		free(new_node);
+	free(new_node);
 	return (NULL);
 }
