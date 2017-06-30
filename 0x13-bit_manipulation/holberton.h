@@ -6,6 +6,7 @@
 
 /* HELPER FUNCTIONS */
 int is_it_binary(const char *b);
+int _putchar(char c);
 
 /* MAIN FUNCTIONS */
 unsigned int binary_to_uint(const char *b);
