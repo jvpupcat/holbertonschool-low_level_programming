@@ -25,20 +25,20 @@ int is_it_binary(const char *b)
 unsigned int binary_to_uint(const char *b)
 {
 	int bin_check, x;
-	unsigned int y;
+	unsigned int dec = 0;
 
 	if (b == NULL)
 		return (0);
 	bin_check = is_it_binary(b);
-	if (bin_check != 1)
+	if (bin_check != 0)
 		return (0);
 	for (x = 0; b[x] != '\0'; x++)
 	{
-		y = y << 1;
+		dec = dec << 1;
 		if (b[x] == '1')
 		{
-			y = y + 1;
+			dec = dec + 1;
 		}
 	}
-	return (y);
+	return (dec);
 }
