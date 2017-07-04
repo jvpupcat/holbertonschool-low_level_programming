@@ -16,8 +16,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	store_open = open(filename, O_CREAT | O_WRONLY | O_APPEND, 0600);
 	if (store_open == -1)
 		return (-1);
-	if (text_content == NULL)
-		return (-1);
 	if (text_content != NULL)
 	{
 		length = 0;
