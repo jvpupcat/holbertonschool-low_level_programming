@@ -41,7 +41,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		cursor = cursor->next;
 	cursor->next = end_node;
 	end_node->next = NULL;
-	end_node->prev = cursor->prev;
+	end_node->prev = cursor;
 	cursor = end_node;
 	return (end_node);
 }
