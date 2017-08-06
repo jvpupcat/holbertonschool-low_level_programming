@@ -26,7 +26,7 @@ dlistint_t *Insert_at_head(int n)
  **/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *add_node;
+	dlistint_t *add_node, *temp = *head;
 
 	add_node = Insert_at_head(n);
 
@@ -35,8 +35,8 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		*head = add_node;
 		return (add_node);
 	}
-	(*head)->prev = add_node;
-	add_node->next = *head;
+	temp->prev = add_node;
+	add_node->next = temp;
 	*head = add_node;
 	return (add_node);
 }
