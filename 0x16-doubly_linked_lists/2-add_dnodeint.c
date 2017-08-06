@@ -22,10 +22,14 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 	else
 	{
-		add_node->next = (*head)->next;
+		*head = add_node;
+		add_node->prev = *head;
+		(add_node->next)->prev = add_node;
+
+/*		add_node->next = (*head)->next;
 		(*head)->prev = add_node->prev;
 		add_node->prev = *head;
-		*head = add_node;
+		*head = add_node;*/
 	}
 	return (add_node);
 }
