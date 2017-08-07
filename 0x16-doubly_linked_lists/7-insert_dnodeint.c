@@ -1,6 +1,25 @@
 #include "lists.h"
 
 /**
+ * create_node - function that creates a node
+ * @n: variable that passes through function
+ * Return: insert_at
+ **/
+dlistint_t *create_node(int n)
+{
+	dlistint_t *insert_at;
+
+	insert_at = malloc(sizeof(dlistint_t));
+	if (insert_at == NULL)
+		return (NULL);
+
+	insert_at->n = n;
+	insert_at->prev = NULL;
+	insert_at->next = NULL;
+	return (insert_at);
+}
+
+/**
  * insert_dnodeint_at_index - function that inserts a node at a given
  * position
  * @h: pointer head
@@ -10,16 +29,17 @@
  **/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *insert, *temp;
-	unsigned int i;
+	dlistint_t *insert, *temp, *store_next;
+	unsigned int before_idx;
 
+	before_idx = 0;
 	temp = *h;
 
-	insert = malloc(sizeof(dlistint_t));
+	insert = create_node(n);
 	if (insert == NULL)
 		return (NULL);
-	insert->n = n;
-	if (h == NULL || temp == NULL)
+
+	if (h == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
@@ -27,17 +47,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = insert;
 		return (*h);
 	}
-	for (; temp != NULL;)
+	while (temp->next != NULL)
 	{
-		if (i == idx - 1)
+		if (before_idx == idx - 1)
 		{
-			insert->next = temp->next;
+			store_next = temp->next;
 			temp->next = insert;
-			return (insert);
+			insert->prev = temp;
+			insert->next = store_next;
+			store_next->prev = insert;
 		}
 		temp = temp->next;
-		i++;
+		before_idx++;
 	}
-	free(insert);
-	return (NULL);
+	return (insert);
 }
