@@ -63,6 +63,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (temp->next == NULL && before_idx + 1 == idx)
 	{
 		temp->next = insert;
+		insert->prev = temp;
 		insert->next = NULL;
 		return (insert);
 	}
