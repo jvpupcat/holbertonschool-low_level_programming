@@ -60,7 +60,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 		before_idx++;
 	}
-	if (temp->next == NULL)
+	if (temp->next == NULL && before_idx + 1 == idx)
 	{
 		temp->next = insert;
 		insert->next = NULL;
