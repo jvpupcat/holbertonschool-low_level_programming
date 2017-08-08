@@ -1,5 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#define EXIT_SUCCESS 0
 
 int _putchar(char c);
 int _islower(int c);
