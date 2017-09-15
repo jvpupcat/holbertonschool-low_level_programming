@@ -4,9 +4,26 @@
 
 ## Overview
 
-Sorting algorithms are algorithms that puts elements of a list into a certain order. 
+Sorting algorithms are algorithms that puts elements of a list into a certain order. Efficient sortin is important for optimizing the use of other algorithms such as search and merge algorithms, which require input data to be in sorted lists. Formally, the output must satisfy two conditions:
+
+* The output is in nondecreasing order.
+* The output is a permutation of the input.
+
+The data is often take be in a array, which allows random access, rather than a list, which allows sequential access. There are different types of sorting algorithms and they are classified by the following:
+
+* Computational complexity
+* Computational complexity
+* Memory
 
 ## Types of Sorting Algorithms
+
+* Bubble sort is sometimes called a sinking sort. It is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.
+
+* Insertion sort is an algorithm that builds the final sorted array one item at a time. It is less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides several advantages. It is efficient for small data sets, simple to implement, more efficient than selection sort or bubble sort, adaptive, and stable.
+
+* Selection sort is called an in-place comparison sort. It's noted for its simplicity and it has performance advantages over more complicated algorithms in certain situations.
+
+* Quicksort, aka partition-exchange sort, is an efficient sorting algorithm. It serves as a systematic method for placing the elements of an array in order. When implemented well, it can be about 2 or 3 times faster than its main competitors - merge sort and heapsort. It is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation is defined. However, it is not a stable sort, meaning that the relative order of equal sort items is not preserved.
 
 ## What you should learn from this project
 
