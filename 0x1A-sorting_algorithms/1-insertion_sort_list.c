@@ -37,28 +37,25 @@ void insertion_swap(listint_t **list, listint_t *before_cursor,
  **/
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *cursor, *before_cursor;
+	listint_t *cursor;
 
-	before_cursor = *list;
-	cursor = before_cursor->next;
-
-	if (list == NULL || cursor->next == NULL)
+	if (list == NULL)
 		return;
 
-	while (cursor != NULL)
+	cursor = *list;
+
+	while (cursor)
 	{
-		while (cursor->prev != NULL && before_cursor->n > cursor->n)
+		if (cursor->next)
 		{
-			insertion_swap(list, before_cursor, cursor);
-			if (cursor->prev != NULL)
+			if (cursor->n > cursor->next->n)
 			{
-				cursor = cursor->prev;
-				before_cursor = cursor->prev;
+				insertion_swap(list, cursor, cursor->next);
+				print_list(*list);
+				cursor = *list;
+				continue;
 			}
-			print_list(*list);
 		}
 		cursor = cursor->next;
-		if (cursor != NULL)
-			before_cursor = cursor->prev;
 	}
 }
