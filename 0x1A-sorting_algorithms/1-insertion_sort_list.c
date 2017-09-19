@@ -5,23 +5,26 @@
  * @list: head pointer
  * Return: none
  **/
-void insertion_swap(listint_t **cursor, listint_t **after_cursor)
+void insertion_swap(listint_t **list, listint_t *before_cursor, listint_t *cursor)
 {
-	listint_t *after_after;
+	listint_t *after_cursor;
 
-	cursor = *list;
 	after_cursor = cursor->next;
-	after_after = after_cursor->next;
 
-	while (cursor->next != NULL)
+	before_cursor->next = after_cursor;
+	cursor->next = before_cursor;
+	cursor->prev = before_cursor->prev;
+	if (before_cursor->prev != NULL)
 	{
-		cursor->next = after_after;
-		after_cursor->next = cursor;
-		after_cursor->prev = cursor->prev;
-		cursor->prev->next = after_cursor;
-		after_after->prev = cursor;
-		cursor->prev = after_cursor;
+		before_cursor->prev->next = cursor;
 	}
+	if (after_cursor != NULL)
+	{
+		after_cursor->prev = before_cursor;
+	}
+	before_cursor->prev = cursor;
+	if (cursor->prev == NULL)
+		*list = cursor;
 }
 
 /**
@@ -31,23 +34,34 @@ void insertion_swap(listint_t **cursor, listint_t **after_cursor)
  **/
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *cursor, *after_cursor, *after_after;
+	listint_t *cursor, *before_cursor;
 
-	cursor = *list;
-	after_cursor = cursor->next;
-	after_after = after_cursor->next;
+	before_cursor = *list;
+	cursor = before_cursor->next;
 
-	if (list == NULL || list->next == NULL)
+	if (list == NULL || cursor->next == NULL)
 		return;	
 
-	while (cursor->next != NULL)
+	while (cursor != NULL)
 	{
-		if (after_cursor->n < cursor->n)
+		printf("After first while\n");
+		while (cursor->prev != NULL && before_cursor->n > cursor->n)
 		{
-			insertion_swap(cursor, after_cursor)
-			while (after_cursor->n > cursor->n)
-				insertion_swap(after_cursor, cursor);
+			printf("before swap\n");
+			printf("%d %d\n", before_cursor->n, cursor->n);
+			insertion_swap(list, before_cursor, cursor);
+			if (cursor->prev != NULL)
+			{
+				cursor = cursor->prev;
+				before_cursor = cursor->prev;
+			}
+			getchar();
+			print_list(*list);
+			printf("after print_list\n");
 		}
+		printf("After 2nd while\n");
 		cursor = cursor->next;
+		if (cursor != NULL)
+			before_cursor = cursor->prev;
 	}
 }
