@@ -44,22 +44,16 @@ void insertion_sort_list(listint_t **list)
 
 	while (cursor != NULL)
 	{
-		printf("After first while\n");
 		while (cursor->prev != NULL && before_cursor->n > cursor->n)
 		{
-			printf("before swap\n");
-			printf("%d %d\n", before_cursor->n, cursor->n);
 			insertion_swap(list, before_cursor, cursor);
 			if (cursor->prev != NULL)
 			{
 				cursor = cursor->prev;
 				before_cursor = cursor->prev;
 			}
-			getchar();
 			print_list(*list);
-			printf("after print_list\n");
 		}
-		printf("After 2nd while\n");
 		cursor = cursor->next;
 		if (cursor != NULL)
 			before_cursor = cursor->prev;
