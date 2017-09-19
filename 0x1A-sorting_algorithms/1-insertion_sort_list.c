@@ -2,10 +2,13 @@
 
 /**
  * insertion_swap - function that swaps doubly linked list
- * @list: head pointer
+ * @list: list
+ * @before_cursor: head pointer
+ * @cursor: cursor
  * Return: none
  **/
-void insertion_swap(listint_t **list, listint_t *before_cursor, listint_t *cursor)
+void insertion_swap(listint_t **list, listint_t *before_cursor,
+	listint_t *cursor)
 {
 	listint_t *after_cursor;
 
@@ -40,7 +43,7 @@ void insertion_sort_list(listint_t **list)
 	cursor = before_cursor->next;
 
 	if (list == NULL || cursor->next == NULL)
-		return;	
+		return;
 
 	while (cursor != NULL)
 	{
