@@ -1,3 +1,2 @@
-#!/usr/bin/bash
-Makefile : m.h
+holberton : m.h
 	gcc main.c holberton.c -o holberton
