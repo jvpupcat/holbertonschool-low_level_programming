@@ -35,13 +35,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	before_idx = 0;
 	temp = *h;
 
+	if (h == NULL)
+		return (NULL);
 	insert = create_node(n);
 	if (insert == NULL)
 		return (NULL);
 
-	if (h == NULL)
-		return (NULL);
-	if (idx == 0)
+	if (idx == 0 && *h == NULL)
 	{
 		insert->next = *h;
 		*h = insert;

@@ -7,13 +7,12 @@
  **/
 void print_number(int n)
 {
-	int i;
+	int i, stored_num = 0;
 	int max = 1000000000;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
 	}
 	if (n == 0)
 	{
@@ -23,7 +22,12 @@ void print_number(int n)
 	{
 		if (n / max != 0)
 		{
-			_putchar(((n / max) % 10) + '0');
+			stored_num = (n / max) % 10;
+			if (stored_num < 0)
+			{
+				stored_num *= -1;
+			}
+			_putchar(stored_num + '0');
 		}
 		max /= 10;
 	}
