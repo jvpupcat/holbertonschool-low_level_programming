@@ -10,6 +10,7 @@
 void print_stmt(int *array, int left, int right)
 {
 	int i;
+
 	printf("Searching in array: ");
 	for (i = left; i < right + 1; i++)
 	{
