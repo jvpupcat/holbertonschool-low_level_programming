@@ -32,7 +32,7 @@ To make comparisons, a programmer must use arithmetic, relational, and logical o
 | Logical Operator | Description | Example
 | --- | --- | --- |
 | && |<p>Called an 'AND' operator. If both conditions are non-zero, then the condition becomes true.</p>|<p>(A && B) is false.</p>|
-| &#124;&#124; |<p>Called an 'OR' operator. If any of the two operands is non-zero, then the condition becomes true.</p>|<p>(A || B) is true.</p>|
+| &#124;&#124; |<p>Called an 'OR' operator. If any of the two operands is non-zero, then the condition becomes true.</p>|<p>(A &#124;&#124; B) is true.</p>|
 | ! |<p>Called a 'NOT' operator. It reverses the logical state a condition. If a condition is true, then using ! will make it false.</p>|<p>while (!TRUE) is false.</p>|
 
 ## While Loop
