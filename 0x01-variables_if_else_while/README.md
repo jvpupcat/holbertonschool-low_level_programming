@@ -11,12 +11,12 @@ When using an if statement, there are two meanings worth noting: TRUE and FALSE.
 Below are a list of relational operators:
 | Operator | Description | Example
 | --- | --- | --- |
-| == |<p>Checks if the values of two operands are equal or not. If yes, then the condition becomes true.</p>|<p>(A == B) is not true.</p>
-| != |<p>Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.</p>|<p>(A != B) is true.</p>
-| |<p></p>|<p></p>
-| |<p></p>|<p></p>
-| |<p></p>|<p></p>
-| |<p></p>|<p></p>
+| == |<p>Checks if the values of two operands are equal or not. If yes, then the condition becomes true.</p>|<p>(A == B) is not true.</p>|
+| != |<p>Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.</p>|<p>(A != B) is true.</p>|
+| |<p></p>|<p></p>|
+| |<p></p>|<p></p>|
+| |<p></p>|<p></p>|
+| |<p></p>|<p></p>|
 
 ## Project Breakdown
 
